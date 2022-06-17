@@ -1,13 +1,13 @@
 # MATHTAGON
 
-##Roles
+## Roles
 - Ryan Jacobo - Frontend Lead java junior developer
 - Rayshaun Thompson - Backend Lead java junior developer
 - Jeremiah Bolden - Backend java junior developer
 - Payton Davis - Frontend java junior developer
 
 
-##Overview / User Story
+## Overview / User Story
 - Users will be presented with algebra expressions of various difficulties.
 - A timer will decrease until they enter the answer in the text below, at which they’ll be presented with a new problem
 - Each user will start with # hit points, while incorrect answers will reduce the their hit points, correct answers will increase the timer
@@ -15,7 +15,7 @@
 - The ends when the timer hits zero
 
 
-##MVP
+## MVP
 - Users can create account with input validation
 - Find API for creating and displaying math text, similar to LatEx
 - Users should be able to report a question if they believe it is wrong
@@ -26,7 +26,7 @@
 - Math problems are presented beautifully with superscripts and math symbols
 
 	
-##Stretch Goals
+## Stretch Goals
 - Users leaderboard
 - Buttons for menu navigation
 - Implement hints
@@ -51,7 +51,7 @@
 - Users can wager points before battle starts but opponent must agree to wager
 
 
-##Technologies:
+## Technologies:
 - Spring Angular 		(front end)
 - Spring Boot  			(front end)
 - Java 				(backend)
