@@ -1,10 +1,10 @@
 # MATHTAGON
 
 ##Roles
--Ryan Jacobo - Frontend Lead java junior developer
--Rayshaun Thompson - Backend Lead java junior developer
--Jeremiah Bolden - Backend java junior developer
--Payton Davis - Frontend java junior developer
+- Ryan Jacobo - Frontend Lead java junior developer
+- Rayshaun Thompson - Backend Lead java junior developer
+- Jeremiah Bolden - Backend java junior developer
+- Payton Davis - Frontend java junior developer
 
 
 ##Overview / User Story
