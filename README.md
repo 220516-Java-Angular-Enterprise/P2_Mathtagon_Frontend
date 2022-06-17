@@ -1,4 +1,4 @@
-                                                                       # MATHTAGON
+#                                                                           MATHTAGON
 
 ## Roles
 - Ryan Jacobo - Frontend Lead java junior developer
