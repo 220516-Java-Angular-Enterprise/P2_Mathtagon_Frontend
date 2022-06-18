@@ -7,11 +7,13 @@
 - Payton Davis - Frontend java junior developer
 
 
-## Overview
-Users will be presented with algebra expressions of various difficulties. A timer will count down until they enter the </br>
-answer in the text below, at which point they’ll be presented with a new problem and the timer continues. Each user will</br>
-start with a set number hit points; while incorrect answers will reduce their hit points, correct answers will increase,/br>
-the timer and longer streaks of correct answers will give a bigger bonus. The game ends when the timer hits zero.
+
+## Overview / User Story
+- Users will be presented with algebra expressions of various difficulties.
+- A timer will decrease until they enter the answer in the text below, at which they’ll be presented with a new problem
+- Each user will start with # hit points, while incorrect answers will reduce the their hit points, correct answers will increase the timer
+- Streaks of correct answers will give a bigger bonus
+- The ends when the timer hits zero
 
 
 ## MVP
@@ -31,9 +33,7 @@ the timer and longer streaks of correct answers will give a bigger bonus. The ga
 - Implement hints
 - Give users more difficult problems as they get better
 - Users have profiles they can customize and see other users at a glance: skills/stats in other math categories
-
-# Multiplayer
-- Find captcha API to avoid bots
+- [find captcha API to avoid bots]
 - Users can try to match with other (dating app swiping/page format) and users after seeing their bio/stats
 - Any users that are online and match to each other create instance of math battle
 - If two users match with each other, they will begin a math battle a la tetris battle 
@@ -66,3 +66,4 @@ the timer and longer streaks of correct answers will give a bigger bonus. The ga
 - Mockito 			(backend)
 - Postman 			(backend)
 - Nodes 			(backend)
+
