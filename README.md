@@ -7,6 +7,7 @@
 - Payton Davis - Frontend java junior developer
 
 
+
 ## Overview / User Story
 - Users will be presented with algebra expressions of various difficulties.
 - A timer will decrease until they enter the answer in the text below, at which they’ll be presented with a new problem
@@ -32,7 +33,6 @@
 - Implement hints
 - Give users more difficult problems as they get better
 - Users have profiles they can customize and see other users at a glance: skills/stats in other math categories
-
 - [find captcha API to avoid bots]
 - Users can try to match with other (dating app swiping/page format) and users after seeing their bio/stats
 - Any users that are online and match to each other create instance of math battle
