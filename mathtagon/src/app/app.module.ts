@@ -1,22 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user/user-list/user-list.component';
+import { AuthComponent } from './user/auth/auth.component';
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
+import { HomeComponent } from './home/home.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    UserListComponent,
-    NavBarComponent
-  ],
+  declarations: [AppComponent, AuthComponent, NavBarComponent, HomeComponent, LeaderboardComponent],
   imports: [
+    AuthModule.forRoot({
+      domain: environment.authDomain,
+      clientId: environment.authClientId,
+    }),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
