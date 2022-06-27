@@ -17,16 +17,20 @@
         <a class="nav-link" href="#">Math Battle</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Leaderboard</a>
+        <a class="nav-link" routerLink="leaderboard">Leaderboard</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Report</a>
       </li>
     </ul>
     <ul class="navbar-nav ms-auto">
-      <li class="nav-item active">Welcome {{ user.nickname }}!</li>
+      <!-- <li class="nav-item active">Welcome {{ user.nickname }}!</li> -->
       <li class="nav-item active">
         <auth></auth>
+      </li>
+      |
+      <li class="nav-link">
+        <a class="nav-link" routerLink="signup">Sign up</a>
       </li>
     </ul>
   </div>

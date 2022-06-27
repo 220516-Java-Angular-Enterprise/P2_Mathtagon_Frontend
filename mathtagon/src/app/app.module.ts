@@ -9,9 +9,17 @@ import { AuthComponent } from './user/auth/auth.component';
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, NavBarComponent, HomeComponent, LeaderboardComponent],
+  declarations: [
+    AppComponent,
+    AuthComponent,
+    NavBarComponent,
+    HomeComponent,
+    LeaderboardComponent,
+  ],
   imports: [
     AuthModule.forRoot({
       domain: environment.authDomain,
@@ -19,6 +27,8 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     }),
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

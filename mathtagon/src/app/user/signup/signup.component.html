@@ -1,13 +1,11 @@
 <div class="container">
-  <h1>Create a New Restaurant</h1>
-  <a routerLink="/restaurants">Back to Lists</a>
+  <h1>Enter your information...</h1>
+  <button routerLink="home">Back to Home</button>
 </div>
-
 <br />
-
+<!-- #newRestoForm is a variable -->
 <div class="container">
   <div class="row half-width">
-    <!-- #newRestoForm is a variable -->
     <form (ngSubmit)="processForm(signUpForm)" #signUpForm="ngForm">
       <div class="form-group">
         <label for="fullname">Full Name:</label>
@@ -18,7 +16,7 @@
           id="fullname"
           name="fullname"
           [placeholder]="placeholders.fullname"
-          #name="ngModel"
+          #fullname="ngModel"
           required
         />
       </div>
@@ -34,7 +32,7 @@
           name="email"
           [(ngModel)]="user.email"
           [placeholder]="placeholders.email"
-          #city="ngModel"
+          #email="ngModel"
           required
         />
       </div>
@@ -50,7 +48,7 @@
           name="username"
           [(ngModel)]="user.username"
           [placeholder]="placeholders.username"
-          #state="ngModel"
+          #username="ngModel"
           required
         />
       </div>
@@ -64,7 +62,7 @@
           name="password"
           [(ngModel)]="user.password"
           [placeholder]="placeholders.password"
-          #state="ngModel"
+          #password="ngModel"
           required
         />
       </div>
@@ -78,7 +76,7 @@
           name="password"
           [(ngModel)]="user.password"
           [placeholder]="placeholders.password"
-          #state="ngModel"
+          #password="ngModel"
           required
         />
       </div>
@@ -92,7 +90,7 @@
           name="age"
           [(ngModel)]="user.age"
           [placeholder]="placeholders.age"
-          #state="ngModel"
+          #age="ngModel"
           required
         />
       </div>
@@ -110,3 +108,61 @@
     </form>
   </div>
 </div>
+
+<!-- #newRestoForm is a variable -->
+<!-- <div class="container">
+  <div class="row half-width">
+    <form (ngSubmit)="processForm(newRestoForm)" #newRestoForm="ngForm">
+
+    <form action="">
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input />
+      </div>
+
+      <br />
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input />
+      </div>
+
+      <br />
+
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input />
+      </div>
+      <br />
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input />
+      </div>
+      <br />
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input />
+      </div>
+      <br />
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input />
+      </div>
+      <br />
+
+      <div class="form-group">
+        <div *ngIf="displayFormSubmitError" style="color: red">
+          <br />
+          Kindly fillout all required fields.
+        </div>
+
+        <br />
+
+        <input type="submit" value="Create" class="btn btn-success" />
+      </div>
+    </form>
+  </div>
+</div> -->

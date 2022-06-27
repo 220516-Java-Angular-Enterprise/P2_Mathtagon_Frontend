@@ -5,11 +5,15 @@ import { NgForm } from '@angular/forms';
 import { User } from 'src/app/models/user';
 
 @Component({
-  selector: 'app-signup',
+  selector: 'signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css'],
 })
 export class SignupComponent implements OnInit {
+  // constructor() {}
+
+  // ngOnInit(): void {}
+
   constructor(private userService: UserService, private router: Router) {}
 
   displayFormSubmitError: boolean = false;
