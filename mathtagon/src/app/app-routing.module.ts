@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GameListComponent } from './game/game-list/game-list.component';
 import { TopFiveComponent } from './game/top-five/top-five.component';
+import { SignUpComponent } from './user/sign-up/sign-up.component';
 
 const routes: Routes = [
+  {
+    path:'sign-up',
+    component:SignUpComponent
+  },
   {
     path:'top-five',
     component:TopFiveComponent
