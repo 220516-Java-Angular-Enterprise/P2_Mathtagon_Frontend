@@ -16,15 +16,15 @@ export class ProfileComponent implements OnInit {
     username: '',
     password: '',
     email: '',
-    fullName: '',
+    fullname: '',
     age: 0,
     games: []
   };
 
   ngOnInit(): void {
-    this.userService.getUserHistory().then(u => {
-      this.user = u;
-    })
+    //this.userService.getUserHistory().then(u => {
+    //  this.user = u;
+    //})
   }
 
 
