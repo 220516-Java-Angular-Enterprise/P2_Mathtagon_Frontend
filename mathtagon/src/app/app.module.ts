@@ -1,35 +1,28 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AuthModule } from '@auth0/auth0-angular';
+import { HttpClientModule } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './user/auth/auth.component';
 import { NavBarComponent } from './common/nav-bar/nav-bar.component';
-import { HomeComponent } from './home/home.component';
-import { LeaderboardComponent } from './leaderboard/leaderboard.component';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { SignUpComponent } from './user/sign-up/sign-up.component';
+import { GameListComponent } from './game/game-list/game-list.component';
+import { ProfileComponent } from './user/profile/profile.component';
+import { TopFiveComponent } from './game/top-five/top-five.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
     NavBarComponent,
-    HomeComponent,
-    LeaderboardComponent,
+    SignUpComponent,
+    GameListComponent,
+    ProfileComponent,
+    TopFiveComponent,
   ],
-  imports: [
-    AuthModule.forRoot({
-      domain: environment.authDomain,
-      clientId: environment.authClientId,
-    }),
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

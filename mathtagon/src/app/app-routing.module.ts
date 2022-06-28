@@ -4,19 +4,17 @@ import { HomeComponent } from './home/home.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GameListComponent } from './game/game-list/game-list.component';
+import { TopFiveComponent } from './game/top-five/top-five.component';
 
 const routes: Routes = [
   {
-    path: 'leaderboard',
-    component: LeaderboardComponent,
+    path: 'top-five',
+    component: TopFiveComponent,
   },
   {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'signup',
-    component: SignupComponent,
+    path: 'history',
+    component: GameListComponent,
   },
 ];
 
