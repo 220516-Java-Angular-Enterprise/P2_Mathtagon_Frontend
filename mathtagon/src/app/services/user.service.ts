@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 import { User } from '../models/user';
@@ -11,7 +11,19 @@ export class UserService {
 
   private userEndpoint = 'http://localhost:8080/mathtagon/users';
 
-  getUserHistory(): Promise<User> {
-    return firstValueFrom(this.http.get<User>(this.userEndpoint));
+  //getUserHistory(reqHeaders: HttpHeaders): Promise<User> {
+  //  return firstValueFrom(this.http.get<User>(
+  //    this.userEndpoint,
+  //    {
+  //      headers: reqHeaders,
+  //    }
+  //    ));
+  //}
+
+  register(user: User): Promise<string> {
+    return firstValueFrom(this.http.post<string>(
+      this.userEndpoint,
+      user
+    ));
   }
 }

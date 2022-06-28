@@ -5,7 +5,7 @@ export interface User {
   username: string;
   password: string;
   email: string;
-  fullName: string;
+  fullname: string;
   age: number;
   games: Game[];
 }
