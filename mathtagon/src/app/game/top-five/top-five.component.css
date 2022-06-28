@@ -1,0 +1,42 @@
+.table {
+  /* border: 1px gray solid; */
+  /* height: 0px; */
+  /* background-size: cover; */
+  /* position: relative; */
+  /* display: block; */
+  /* border-collapse: collapse; */
+  /* min-width: 400px; */
+}
+
+/* .table thead {
+  background-color: black;
+  color: white;
+  margin: 5px;
+  font-weight: bold;
+} */
+
+.table thead th {
+  background-color: black;
+  color: white;
+  /* margin: 10px; */
+  padding: 5px;
+  /* border: 10px 15px 20px 25; */
+  font-weight: bold;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+h2 {
+  text-align: center;
+}
+
+.container {
+  /* background: transparent; */
+}
+
+/* * {
+  margin: 0;
+  padding: 100;
+} */
