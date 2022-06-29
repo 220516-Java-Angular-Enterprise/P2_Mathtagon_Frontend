@@ -1,11 +1,15 @@
 <div class="container">
-  <h2>Top 5</h2>
-  <table class="table table-hover">
+  <h1 class="heading">Top 5</h1>
+  <!--Parent-->
+  <table border="1" class="table table-hover">
+    <!--Child-->
     <thead>
       <th>Champions</th>
       <th>Lifetime Achievement</th>
       <th colspan="2"></th>
     </thead>
+    <!--Child-->
+
     <tbody>
       <tr *ngFor="let row of scores">
         <td>{{ row[0] }}</td>
