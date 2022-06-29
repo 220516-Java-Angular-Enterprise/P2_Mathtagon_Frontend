@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
   outline: solid brown;
   font-weight: 500;
   padding-bottom: 10px;
@@ -12,11 +12,6 @@ h1 {
   display: block;
 }
 
-.container {
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 
 .table {
   max-width: 650px;
@@ -44,14 +39,29 @@ h1 {
 .table thead th {
   padding: 0px 30px;
 }
+*/
+
+.container {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /* Payton */
+
 #style {
   position: absolute;
   top: 30%;
   right: 26%;
   width: 700px;
 }
+
+.style {
+  /* originally from html */
+  color: white;
+  font-size: 70px;
+}
+
 #leaders {
   position: absolute;
   top: 15%;
@@ -64,8 +74,6 @@ h1 {
     opacity: 0;
   }
 }
-
-/* Payton */
 
 table {
   font-family: arial, sans-serif;
