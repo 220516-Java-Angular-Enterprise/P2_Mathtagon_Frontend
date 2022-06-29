@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/user.service';
 //import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
@@ -8,14 +11,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthComponent implements OnInit {
 
-  constructor(/*private auth : AuthService*/) { }
+  constructor(private userService: UserService, private router: Router) { }
 
+  displayFormSubmitError: boolean = false;
   isLoggedIn: boolean = false;
 
+  user: any = { };
+
+  formLabels = {
+    username: 'Username',
+    password: 'Password'
+  };
+
   ngOnInit(): void {
-    //this.auth.isAuthenticated$.subscribe(b => {
-    //  this.isLoggedIn = b
-    //})
+  }
+
+  processForm(loginForm: NgForm) {
+    try {
+      if(loginForm.form.status === 'VALID') {
+        this.userService.login(this.user);
+      }
+    } catch(err) {
+      this.displayFormSubmitError = true;
+    }
   }
 
   logIn(): void{
