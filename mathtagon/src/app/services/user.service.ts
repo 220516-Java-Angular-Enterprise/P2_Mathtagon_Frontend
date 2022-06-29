@@ -10,7 +10,9 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  private userEndpoint = "http://localhost:8080/mathtagon/users";
+  private rootURL = "http://localhost:8080/mathtagon";
+  private userEndpoint = this.rootURL+"/users";
+  private authEndpoint = this.rootURL+"/auth";
 
   //getUserHistory(reqHeaders: HttpHeaders): Promise<User> {
   //  return firstValueFrom(this.http.get<User>(
@@ -24,6 +26,13 @@ export class UserService {
   register(user: User): Promise<string> {
     return firstValueFrom(this.http.post<string>(
       this.userEndpoint,
+      user
+    ));
+  }
+
+  login(user: User): Promise<User> {
+    return firstValueFrom(this.http.post<User>(
+      this.authEndpoint,
       user
     ));
   }

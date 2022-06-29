@@ -34,8 +34,7 @@ export class SignUpComponent implements OnInit {
         this.userService.register(this.user);
       }
       else throw "";
-    }
-    catch {
+    } catch(err) {
       this.displayFormSubmitError = true;
     }
   }
