@@ -1,48 +1,52 @@
+<div id="style2">
 <div class="container">
+
     <h1>Enter your account information...</h1>
     <button routerLink="/">Back to Home</button>
     <button routerLink="/login">Returning User?</button>
+
 </div>
 <br />
 
+<div id="style">
 <div class="container">
     <div class="row half-width">
         <form (ngSubmit)="processForm(signUpForm)" #signUpForm=ngForm>
             <div class="form-group">
-                <label for="inUser">Username:</label>
-                <input class="form-control" type="text" id="inUser" name="inUser"
+                <label for="inUser" style="color:white; background:black">Enter Username:</label>
+                <input class="form-control" type="text" id="inUser" name="inUser" style="background:black; border: 3px grey solid"
                   [(ngModel)]="user.username" #username="ngModel"
-                  [placeholder]="formLabels.username" required
+                  [placeholder]="formLabels.username" required 
                 />
             </div>
-            <br />
+            
             <div class="form-group">
-                <label for="inEmail">E-Mail:</label>
-                <input  class="form-control" type="text" id="inEmail" name="inEmail"
+                <label for="inEmail" style="color:white; background:black">Enter E-Mail:</label>
+                <input  class="form-control" type="text" id="inEmail" name="inEmail" style="background:black; border: 3px grey solid"
                   [(ngModel)]="user.email" #email="ngModel"
                   [placeholder]="formLabels.email" required
                 />
             </div>
-            <br />
+            
             <div class="form-group">
-                <label for="inPass">Password:</label>
-                <input class="form-control" type="text" id="inPass" name="inPass"
+                <label for="inPass" style="color:white; background:black">Enter Password:</label>
+                <input class="form-control" type="text" id="inPass" name="inPass" style="background:black; border: 3px grey solid"
                   [(ngModel)]="user.password" #password="ngModel"
                   [placeholder]="formLabels.password" required
                 />
             </div>
-            <br />
+            
             <div class="form-group">
-                <label for="inFull">Full Name:</label>
-                <input class="form-control" type="text" id="inFull" name="inFull"
+                <label for="inFull" style="color:white; background:black">Enter Full Name:</label>
+                <input class="form-control" type="text" id="inFull" name="inFull" style="background:black; border: 3px grey solid"
                   [(ngModel)]="user.fullname" #fullname="ngModel"
                   [placeholder]="formLabels.fullName" required
                 />
             </div>
-            <br />
+            
             <div class="form-group">
-                <label for="inAge">Age:</label>
-                <input class="form-control" type="text" id="inAge" name="inAge"
+                <label for="inAge" style="color:white; background:black">Enter Age:</label>
+                <input class="form-control" type="text" id="inAge" name="inAge" style="background:black; border: 3px grey solid"
                   [(ngModel)]="user.age" #age="ngModel"
                   [placeholder]="formLabels.age" required
                 />
@@ -59,4 +63,5 @@
             </div>
         </form>
     </div>
+</div>
 </div>
