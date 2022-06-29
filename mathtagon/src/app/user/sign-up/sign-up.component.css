@@ -1,5 +1,21 @@
-.container {
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+#style {
+  position: absolute;
+  top: 30%;
+  right: 43%;
+}
+#style2 {
+  position: absolute;
+  top: 12%;
+  right: 17%;
+  animation: blinker 2s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+#buttons {
+  position: absolute;
+  top: 24%;
+  right: 42%;
 }

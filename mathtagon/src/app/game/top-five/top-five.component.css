@@ -44,3 +44,46 @@ h1 {
 .table thead th {
   padding: 0px 30px;
 }
+
+/* Payton */
+#style {
+  position: absolute;
+  top: 30%;
+  right: 26%;
+  width: 700px;
+}
+#leaders {
+  position: absolute;
+  top: 15%;
+  right: 38%;
+  color: white;
+  animation: blinker 2s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Payton */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tr:nth-child(odd) {
+  background-color: #3a3939;
+  color: white;
+}
