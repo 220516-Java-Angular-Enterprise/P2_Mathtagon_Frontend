@@ -27,7 +27,7 @@ export class SignUpComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  processForm(signUpForm: NgForm) {
+  processForm(signUpForm: NgForm): void {
     try {
       if (signUpForm.form.status === 'VALID') {
         this.userService.register(this.user);
