@@ -38,13 +38,18 @@ export class AuthFormComponent implements OnInit {
     if(loginForm.form.status === 'VALID') {
       console.log('Trying to login');
 
-      this._userService.login(this.tmpUser)
-        .then(u => {if(u) this._router.navigateByUrl('/');});
+      this._userService.login(this.tmpUser).then(() => {
+          alert(`Login Successful. Heading to arena.`);
+          this._router.navigateByUrl('/');
+        }).catch(err => {
+          console.log(err);
+        });
+        
+        loginForm.reset();
     }
 
     else {
       this.displayFormSubmitError = true;
-      console.log('Missing Credentials');
     }
 
   }
