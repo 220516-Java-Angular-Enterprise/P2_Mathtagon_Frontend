@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/services/user.service';
-//import { AuthService } from '@auth0/auth0-angular';
+import { AuthFormComponent } from './auth-form/auth-form.component';
 
 @Component({
   selector: 'auth',
@@ -10,36 +9,27 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent implements OnInit {
-  constructor(private userService: UserService, private router: Router) {}
 
-  displayFormSubmitError: boolean = false;
-  isLoggedIn: boolean = false;
+  constructor(private _userService: UserService, private _authForm: AuthFormComponent, private _router: Router) {
+  }
 
-  user: any = {};
+  isLoggedIn!: boolean;
+    
 
-  formLabels = {
-    username: 'Username',
-    password: 'Password',
-  };
-
-  ngOnInit(): void {}
-
-  processForm(loginForm: NgForm) {
-    try {
-      if (loginForm.form.status === 'VALID') {
-        this.userService.login(this.user);
-      }
-    } catch (err) {
-      this.displayFormSubmitError = true;
-    }
-    loginForm.reset();
+  ngOnInit(): void {
+    this._userService.isAuthenticated$.subscribe(a => {
+      this.isLoggedIn = a;
+      console.log('isLoggedIn:',this.isLoggedIn);
+    });
   }
 
   logIn(): void {
-    //this.auth.loginWithRedirect();
+    this._authForm.logIn();
   }
 
   logOut(): void {
-    //this.auth.logout();
+    this._userService.logOut();
+    this._router.navigateByUrl('/');
   }
+
 }
