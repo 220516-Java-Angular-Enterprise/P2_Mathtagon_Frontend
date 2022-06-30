@@ -9,7 +9,7 @@ import { User } from '../models/user';
 export class UserService {
 
   //private _rootURL = "http://localhost:8080/mathtagon";
-  private _rootURL = "http://Mathtagon2-env.eba-uvn3ra9e.us-east-1.elasticbeanstalk.com:8080/mathtagon/"
+  private _rootURL = "http://Mathtagon2-env.eba-uvn3ra9e.us-east-1.elasticbeanstalk.com:8080/mathtagon"
   private _userEndpoint = this._rootURL+"/users";
   private _authEndpoint = this._rootURL+"/auth";
 
@@ -39,22 +39,26 @@ export class UserService {
   //    ));
   //}
 
-  register(user: User): Promise<string> {
-    return firstValueFrom(this.http.post<string>(this._userEndpoint, user));
+  register(user: User): Promise<string> {    
+    let p = firstValueFrom(this.http.post<string>(this._userEndpoint, user));
+    p.then(s => {console.log(s)}).catch(err => {console.log(err)});
+    return p;
   }
 
-  async login(user: User): Promise<User | void> {
-    try {
-      const u = await firstValueFrom(this.http.post<User>(
-        this._authEndpoint,
-        user
-      ));
-      this._user.next(u);
-      this._isAuthenticated.next(true);
-    } catch (err) {
-      this._user.next({} as any);
-      this._isAuthenticated.next(false);
-    }
+  login(user: User): Promise<User> {
+    let userPromise: Promise<User> = firstValueFrom(this.http.post<User>(
+      this._authEndpoint, user
+    ));
+
+    userPromise.then(u => {
+        this._user.next(u);
+        this._isAuthenticated.next(true);
+      }).catch(err => {
+        this._user.next({} as any);
+        this._isAuthenticated.next(false);
+      });
+
+    return userPromise;
   }
 
   logOut(): void {
