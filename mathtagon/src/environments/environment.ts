@@ -4,9 +4,15 @@
 
 export const environment = {
   production: false,
-  authDomain: 'dev-7ztr7f43.us.auth0.com',
-  authClientId: 'yrdjsmQ8I5QrGsVR7Uk0xenCcXRAHGKu'
+  authDomain: 'dev-2kjl5ui1.us.auth0.com',
+  authClientId: '8cwys2x5AnzXXg63fv40T3nEkJBH4tuZ',
 };
+
+// export const environment = {
+//   production: false,
+//   authDomain: 'dev-7ztr7f43.us.auth0.com',
+//   authClientId: 'yrdjsmQ8I5QrGsVR7Uk0xenCcXRAHGKu',
+// };
 
 /*
  * For easier debugging in development mode, you can import the following file

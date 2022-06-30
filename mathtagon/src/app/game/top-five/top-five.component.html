@@ -1,40 +1,20 @@
-<style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 100%;
-    }
-    
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
-    tr:nth-child(odd) {
-      background-color: #3a3939;
-      color:white;
-    }
-    </style>
-
-    <div id="leaders"><h2 style="color:white; font-size:70px">Leaderboard</h2></div>
+<div id="leaders"></div>
 
 <div id="style">
-<div class="container">
+  <div class="container">
+    <h2 class="leaderboard">MASTERS</h2>
+
     <table class="table table-hover">
-        <thead>
-            <th style="color:white; background:black">Champions</th>
-            <th style="color:white; background:black">Lifetime Achievement</th>
-            <th colspan="2" ></th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let row of scores">
-                <td>{{row[0]}}</td>
-                <td>{{row[1]}}  points</td>
-        </tbody>
+      <thead>
+        <th>Champions</th>
+        <th>Lifetime Achievement</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of scores">
+          <td>{{ row[0] }}</td>
+          <td>{{ row[1] }} points</td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
 </div>

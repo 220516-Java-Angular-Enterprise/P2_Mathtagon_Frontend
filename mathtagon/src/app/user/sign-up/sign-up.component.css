@@ -1,21 +1,35 @@
-#style{
-    position:absolute;
-    top: 30%;
-    right:43%;
+.card {
+  border: none;
+  margin-top: 10px;
+  border: none;
+  width: 500px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: hsla(205, 46%, 30%, 1);
+  background: linear-gradient(
+    90deg,
+    /* hsla(205, 46%, 30%, 1) 0%, */ /* hsla(260, 29%, 36%, 1) 100% */
+      rgb(214, 142, 47) 0%,
+    rgb(189, 67, 30) 100%
+  );
 }
-#style2{
-    position:absolute;
-    top: 12%;
-    right: 17%;
-    animation: blinker 2s linear infinite;
+
+.card h1,
+h6 {
+  color: #fff;
 }
-@keyframes blinker{
-    50%{
-        opacity:0;
-    }
+
+label {
+  color: #fff;
 }
-#buttons{
-    position:absolute;
-    top: 24%;
-    right:42%;
+
+.invalid {
+  color: #fff;
+}
+
+.btn {
+  margin-right: 10px;
 }

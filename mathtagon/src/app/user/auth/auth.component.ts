@@ -7,40 +7,39 @@ import { UserService } from 'src/app/services/user.service';
 @Component({
   selector: 'auth',
   templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.css']
+  styleUrls: ['./auth.component.css'],
 })
 export class AuthComponent implements OnInit {
-
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) {}
 
   displayFormSubmitError: boolean = false;
   isLoggedIn: boolean = false;
 
-  user: any = { };
+  user: any = {};
 
   formLabels = {
     username: 'Username',
-    password: 'Password'
+    password: 'Password',
   };
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   processForm(loginForm: NgForm) {
     try {
-      if(loginForm.form.status === 'VALID') {
+      if (loginForm.form.status === 'VALID') {
         this.userService.login(this.user);
       }
-    } catch(err) {
+    } catch (err) {
       this.displayFormSubmitError = true;
     }
+    loginForm.reset();
   }
 
-  logIn(): void{
+  logIn(): void {
     //this.auth.loginWithRedirect();
   }
 
-  logOut(): void{
+  logOut(): void {
     //this.auth.logout();
   }
 }

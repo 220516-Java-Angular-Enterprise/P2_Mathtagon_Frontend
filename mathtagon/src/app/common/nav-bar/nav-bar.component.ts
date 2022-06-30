@@ -3,18 +3,16 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  user: any = {}
+  user: any = {};
 
   ngOnInit(): void {
     //this.auth.user$.subscribe(u => {
     //  this.user = u;
     //})
   }
-
 }
