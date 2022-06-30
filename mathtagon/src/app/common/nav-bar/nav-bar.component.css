@@ -1,3 +1,24 @@
+/* @import url("http://fonts.cdnfonts.com/css/games"); */
 .navbar .navbar-itme {
   text-align: center;
+}
+
+.navbar {
+  background: linear-gradient(
+    90deg,
+    /* hsla(205, 46%, 30%, 1) 0%, */ /* hsla(260, 29%, 36%, 1) 100% */
+      rgb(216, 200, 179) 0%,
+    rgb(190, 160, 24) 100%
+  );
+}
+.navbar-brand {
+  margin-left: 2rem;
+  color: black;
+  font-size: 30px;
+  font-weight: 200;
+  font-family: "Games", sans-serif;
+}
+
+.navbar-nav {
+  font-weight: bold;
 }
