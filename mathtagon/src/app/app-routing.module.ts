@@ -2,6 +2,7 @@
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GameListComponent } from './game/game-list/game-list.component';
+import { NewGameComponent } from './game/new-game/new-game.component';
 import { TopFiveComponent } from './game/top-five/top-five.component';
 import { AuthFormComponent } from './user/auth/auth-form/auth-form.component';
 import { AuthComponent } from './user/auth/auth.component';
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: TopFiveComponent,
+  },
+  {
+    path: 'new-game',
+    component:NewGameComponent
   },
 ];
 

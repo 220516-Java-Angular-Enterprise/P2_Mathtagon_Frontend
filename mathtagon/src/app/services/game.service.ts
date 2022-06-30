@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
+import { Game } from '../models/game';
 
 @Injectable({
   providedIn: 'root'
@@ -14,4 +15,7 @@ export class GameService {
   getTop5(): Promise<[string, number][]> {
     return firstValueFrom(this.http.get<[string, number][]>(this.gameEndpoint));
   }
+
+
+  
 }

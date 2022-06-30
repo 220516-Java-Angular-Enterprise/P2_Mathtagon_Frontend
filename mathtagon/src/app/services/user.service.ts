@@ -9,7 +9,7 @@ import { User } from '../models/user';
 export class UserService {
 
   //private _rootURL = "http://localhost:8080/mathtagon";
-  private _rootURL = "http://Mathtagon2-env.eba-uvn3ra9e.us-east-1.elasticbeanstalk.com:8080/mathtagon/"
+  private _rootURL = "http://Mathtagon2-env.eba-uvn3ra9e.us-east-1.elasticbeanstalk.com:8080/mathtagon"
   private _userEndpoint = this._rootURL+"/users";
   private _authEndpoint = this._rootURL+"/auth";
 
