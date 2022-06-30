@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { UserService } from 'src/app/services/user.service';
+import { AuthFormComponent } from 'src/app/user/auth/auth-form/auth-form.component';
 
 @Component({
   selector: 'nav-bar',
@@ -6,13 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
-  constructor() {}
 
-  user: any = {};
+  constructor(private _userService: UserService) { }
 
+  user!: any;
+  
   ngOnInit(): void {
-    //this.auth.user$.subscribe(u => {
-    //  this.user = u;
-    //})
+    this._userService.user$.subscribe(u => {
+        this.user = u;
+        console.log('changing user to',this.user);
+      }
+    );
   }
 }

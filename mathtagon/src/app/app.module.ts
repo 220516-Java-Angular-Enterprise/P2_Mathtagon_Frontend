@@ -12,6 +12,7 @@ import { SignUpComponent } from './user/sign-up/sign-up.component';
 import { GameListComponent } from './game/game-list/game-list.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { TopFiveComponent } from './game/top-five/top-five.component';
+import { AuthFormComponent } from './user/auth/auth-form/auth-form.component';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,15 @@ import { TopFiveComponent } from './game/top-five/top-five.component';
     GameListComponent,
     ProfileComponent,
     TopFiveComponent,
+    AuthFormComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
-  providers: [],
-  bootstrap: [AppComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+  ],
+  providers: [AuthFormComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,0 +1,59 @@
+<div class="style">
+    <div class="container">
+      <div class="row">
+        <div class="card">
+          <div class="text-center">
+            <h1>Enter the Math Arena</h1>
+            <h6>Enter username & password</h6>
+            <div>
+              <a routerLink="/signup">New Warrior?</a>
+              <span class="bar"> | </span>
+              <a routerLink="/">Back to Home</a>
+            </div>
+          </div>
+          <form (ngSubmit)="processForm(loginForm)" #loginForm="ngForm">
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Username</label>
+            <input
+                class="form-control"
+                type="text"
+                id="inUser"
+                name="inUser"
+                [(ngModel)]="tmpUser.username"
+                #username="ngModel"
+                [placeholder]="formLabels.username"
+                required
+            />
+
+            <div id="emailHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+            >
+            <input
+                class="form-control"
+                type="text"
+                id="inPass"
+                name="inPass"
+                [(ngModel)]="tmpUser.password"
+                #password="ngModel"
+                [placeholder]="formLabels.password"
+                required
+            />
+            </div>
+            <div class="form-group">
+            <br />
+            <button type="submit" class="btn btn-primary">Login</button>
+
+            <br />
+            <div *ngIf="displayFormSubmitError" style="color: red">
+                <br />
+                Credentials incorrect.
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
