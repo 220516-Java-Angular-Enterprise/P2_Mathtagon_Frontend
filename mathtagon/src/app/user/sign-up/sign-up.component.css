@@ -25,3 +25,11 @@ h6 {
 label {
   color: #fff;
 }
+
+.invalid {
+  color: #fff;
+}
+
+.btn {
+  margin-right: 10px;
+}
