@@ -8,8 +8,8 @@ import { User } from '../models/user';
 })
 export class UserService {
 
-  //private _rootURL = "http://localhost:8080/mathtagon";
-  private _rootURL = "http://Mathtagon2-env.eba-uvn3ra9e.us-east-1.elasticbeanstalk.com:8080/mathtagon"
+  private _rootURL = "http://localhost:8080/mathtagon";
+  //private _rootURL = "http://Mathtagon2-env.eba-uvn3ra9e.us-east-1.elasticbeanstalk.com:8080/mathtagon"
   private _userEndpoint = this._rootURL+"/users";
   private _authEndpoint = this._rootURL+"/auth";
 
@@ -40,9 +40,7 @@ export class UserService {
   //}
 
   register(user: User): Promise<string> {    
-    let p = firstValueFrom(this.http.post<string>(this._userEndpoint, user));
-    p.then(s => {console.log(s)}).catch(err => {console.log(err)});
-    return p;
+    return firstValueFrom(this.http.post<string>(this._userEndpoint, user));
   }
 
   login(user: User): Promise<User> {
@@ -53,7 +51,7 @@ export class UserService {
     userPromise.then(u => {
         this._user.next(u);
         this._isAuthenticated.next(true);
-      }).catch(err => {
+      }).catch(() => {
         this._user.next({} as any);
         this._isAuthenticated.next(false);
       });
