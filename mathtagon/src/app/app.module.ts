@@ -13,6 +13,7 @@ import { GameListComponent } from './game/game-list/game-list.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { TopFiveComponent } from './game/top-five/top-five.component';
 import { AuthFormComponent } from './user/auth/auth-form/auth-form.component';
+import { NewGameComponent } from './game/new-game/new-game.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AuthFormComponent } from './user/auth/auth-form/auth-form.component';
     GameListComponent,
     ProfileComponent,
     TopFiveComponent,
-    AuthFormComponent
+    AuthFormComponent,
+    NewGameComponent,
   ],
   imports: [
     BrowserModule,

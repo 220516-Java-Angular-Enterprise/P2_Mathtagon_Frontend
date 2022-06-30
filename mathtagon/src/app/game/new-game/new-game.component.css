@@ -1,0 +1,32 @@
+  .prob {
+    color: black;
+    background: -webkit-linear-gradient(rgb(65, 155, 214), #333);
+    font-size: 40px;
+    text-align: center;
+  }
+  
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  thead {
+    color: white;
+    background: black;
+    text-align:center;
+    font-size: 28px;
+    top: 30%;
+  }
+  #post{
+    color: White;
+    width: 25%;
+    background: black;
+    border:3px grey solid;
+    font-size: 40px;
+    text-align: center;
+    top:70%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
