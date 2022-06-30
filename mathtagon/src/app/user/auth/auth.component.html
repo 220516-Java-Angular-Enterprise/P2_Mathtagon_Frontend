@@ -1,2 +1,2 @@
-<button class="btn btn-default" (click)="logIn()" *ngIf="!isLoggedIn">Log In</button>
+<button class="btn btn-default" routerLink="/login" *ngIf="!isLoggedIn">Log In</button>
 <button class="btn btn-default" (click)="logOut()" *ngIf="isLoggedIn">Log Out</button>

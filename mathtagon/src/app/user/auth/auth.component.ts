@@ -23,13 +23,8 @@ export class AuthComponent implements OnInit {
     });
   }
 
-  logIn(): void {
-    this._authForm.logIn();
-  }
-
   logOut(): void {
     this._userService.logOut();
-    this._router.navigateByUrl('/');
   }
 
 }

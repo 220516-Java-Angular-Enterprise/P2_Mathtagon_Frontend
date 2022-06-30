@@ -39,22 +39,24 @@ export class UserService {
   //    ));
   //}
 
-  register(user: User): Promise<string> {
+  register(user: User): Promise<string> {    
     return firstValueFrom(this.http.post<string>(this._userEndpoint, user));
   }
 
-  async login(user: User): Promise<User | void> {
-    try {
-      const u = await firstValueFrom(this.http.post<User>(
-        this._authEndpoint,
-        user
-      ));
-      this._user.next(u);
-      this._isAuthenticated.next(true);
-    } catch (err) {
-      this._user.next({} as any);
-      this._isAuthenticated.next(false);
-    }
+  login(user: User): Promise<User> {
+    let userPromise: Promise<User> = firstValueFrom(this.http.post<User>(
+      this._authEndpoint, user
+    ));
+
+    userPromise.then(u => {
+        this._user.next(u);
+        this._isAuthenticated.next(true);
+      }).catch(() => {
+        this._user.next({} as any);
+        this._isAuthenticated.next(false);
+      });
+
+    return userPromise;
   }
 
   logOut(): void {

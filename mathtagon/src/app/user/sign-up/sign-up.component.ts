@@ -28,15 +28,17 @@ export class SignUpComponent implements OnInit {
   ngOnInit(): void {}
 
   processForm(signUpForm: NgForm): void {
-    try {
-      if (signUpForm.form.status === 'VALID') {
-        this.userService.register(this.user);
-        alert('Registration Successful! You will be directed to the Login!');
-        this.router.navigate(['login']);
-      } else throw '';
-    } catch (err) {
-      this.displayFormSubmitError = true;
+    if (signUpForm.form.status === 'VALID') {
+      this.userService.register(this.user).then(s =>{
+        console.log(s);
+        alert(`Registration Successful!\nYour user ID is ${s}. You will be directed to the Login!`);
+        this.router.navigateByUrl('/login');
+      }).catch(err => {
+        console.log(err);
+      })
     }
+    
+    else this.displayFormSubmitError = true;
     signUpForm.reset();
   }
 
