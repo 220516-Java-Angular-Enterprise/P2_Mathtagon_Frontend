@@ -9,7 +9,7 @@ export class GameService {
 
   constructor(private http: HttpClient) { }
 
-  private gameEndpoint = "http://localhost:8080/mathtagon/games";
+  private gameEndpoint = "http://Mathtagon2-env.eba-uvn3ra9e.us-east-1.elasticbeanstalk.com:8080/mathtagon/games";
 
   getTop5(): Promise<[string, number][]> {
     return firstValueFrom(this.http.get<[string, number][]>(this.gameEndpoint));
