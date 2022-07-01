@@ -1,4 +1,4 @@
 export interface ProblemGenerator {
-    maxOps: number;
-    numLength: number;
+    maxOperations: number;
+    problems: number;
 }
