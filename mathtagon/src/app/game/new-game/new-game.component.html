@@ -1,15 +1,17 @@
-<div class="outer-container">
-  <h2 class="heading">Challenge</h2>
-  <form class="container">
-    <div id="post">{{ problem1 }}</div>
-    <div class="form">
-      <input class="input" type="text" />
-      <button type="button" class="btn btn-danger">Strike</button>
-    </div>
-  </form>
-  <div class="answer">
-    <table></table>
-    <h3>Your Answer</h3>
-    <h3>Correct Answer</h3>
+<button type="button" class="btn btn-danger" (click)="start()" *ngIf="!started">
+  Start Game
+</button>
+
+<div id="problems"></div>
+<div id="style">
+  <div class="container">
+    <h2 class="prob">Problem</h2>
   </div>
 </div>
+<h2 id="post">Score: {{ score }} Lives:{{ lives }}</h2>
+<br />
+<div id="post">{{ toSolve }}</div>
+<input id="answer" type="text" />
+<button type="submit" class="btn btn-primary" (click)="checkAnswer()">
+  Submit
+</button>
