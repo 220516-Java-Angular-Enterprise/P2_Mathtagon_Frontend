@@ -1,32 +1,79 @@
-  .prob {
-    color: black;
-    background: -webkit-linear-gradient(rgb(65, 155, 214), #333);
-    font-size: 40px;
-    text-align: center;
-  }
-  
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  thead {
-    color: white;
-    background: black;
-    text-align:center;
-    font-size: 28px;
-    top: 30%;
-  }
-  #post{
-    color: White;
-    width: 25%;
-    background: black;
-    border:3px grey solid;
-    font-size: 40px;
-    text-align: center;
-    top:70%;
-    display: block;
+/* .container {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  width: 500px;
+  height: 300px;
+} */
+
+.outer-container {
+  margin-top: 20px;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: hsla(205, 46%, 30%, 1); */
+  background: linear-gradient(
+    90deg,
+    rgb(214, 142, 47) 0%,
+    rgb(189, 67, 30) 100%
+  );
+}
+
+.heading {
+  color: black;
+  background: -webkit-linear-gradient(rgb(65, 155, 214), #333);
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  color: white;
+  background: black;
+  text-align: center;
+  font-size: 28px;
+  top: 30%;
+}
+#post {
+  color: White;
+  width: 50%;
+  background: black;
+  border: 3px grey solid;
+  font-size: 40px;
+  text-align: center;
+  /* top: 60%; */
+  /* display: block; */
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-  }
+}
+
+.form {
+  margin-top: 10px;
+
+  position: relative;
+  left: 100px;
+}
+
+.input {
+  width: 70px;
+  font-size: 25px;
+}
+
+.btn {
+  position: relative;
+  left: 10px;
+}
+
+.answer {
+  margin-top: 10px;
+}

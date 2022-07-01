@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/new-game">New Game</a>
+        <a class="nav-link" routerLink="/new-game">Battle</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/top-five">Rankings</a>
@@ -22,8 +22,12 @@
     </ul>
     <ul class="navbar-nav ms-auto">
       <li class="nav-item active">
-        <button class="btn btn-default" routerLink="/history" *ngIf="user.username">
-          {{user.username}}
+        <button
+          class="btn btn-default"
+          routerLink="/history"
+          *ngIf="user.username"
+        >
+          {{ user.username }}
         </button>
       </li>
       <li class="nav-item active">
