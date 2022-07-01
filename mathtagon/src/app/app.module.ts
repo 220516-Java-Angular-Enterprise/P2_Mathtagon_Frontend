@@ -14,6 +14,7 @@ import { ProfileComponent } from './user/profile/profile.component';
 import { TopFiveComponent } from './game/top-five/top-five.component';
 import { AuthFormComponent } from './user/auth/auth-form/auth-form.component';
 import { NewGameComponent } from './game/new-game/new-game.component';
+import { LauncherComponent } from './launcher/launcher.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { NewGameComponent } from './game/new-game/new-game.component';
     TopFiveComponent,
     AuthFormComponent,
     NewGameComponent,
+    LauncherComponent,
   ],
   imports: [
     BrowserModule,
