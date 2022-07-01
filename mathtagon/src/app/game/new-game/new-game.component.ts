@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Game } from 'src/app/models/game';
 import { ProblemGenerator } from 'src/app/models/problem-generator';
 import { ProblemsService } from 'src/app/services/problems.service';
 import { HttpClient } from '@angular/common/http';
 import { GameService } from 'src/app/services/game.service';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'new-game',
@@ -16,18 +17,22 @@ export class NewGameComponent implements OnInit {
     problems: 1
   }
 
+  toSolve!: string;
+  answers!: string;
+
+
   constructor(private _problemsService: ProblemsService, private _gameService: GameService,private _http: HttpClient) {
     this._problemsService.problem$.subscribe(p => this.toSolve = p);
-    this._problemsService.answer$.subscribe(a => this.answers=a);
+    this._problemsService.answer$.subscribe(a => this.answers = a);
+    
   }
 
+
+  score!: number;
+  lives!: number;
+
   started: boolean = false;
-
-  score: number = 0;
-  lives: number = 3;
-
-  toSolve: string = "";
-  answers: string = "";
+  ended: boolean = false;
 
   ngOnInit() {
   }
@@ -35,11 +40,14 @@ export class NewGameComponent implements OnInit {
   //start the game and keep track of score
   start():void {
     this.started = true;
+    this.score = 0;
+    this.lives = 3;
+
     this.cycle();
   }
 
   end(): void {
-
+    this.ended = true;
   }
 
   cycle(): void {
@@ -50,15 +58,19 @@ export class NewGameComponent implements OnInit {
 
   //evaluating user input
   checkAnswer(): void {
-    let input:string = (<HTMLInputElement>document.getElementById("answer")).value
-    let correct: boolean = input == this.answers[0];
+    let input:HTMLInputElement = <HTMLInputElement>document.getElementById("answer")
+    let correct: boolean = input.value == this.answers[0];
     console.log('entered',input, 'answer', this.answers);
 
     if(correct) this.score++;
     else this.lives--;
 
-    if(this.lives > 0) this.cycle();
-    else this.end();
+    if(this.lives > 0) {
+      this.cycle();
+    }
+    else {
+      this.end();
+    }
   }
 
 }
