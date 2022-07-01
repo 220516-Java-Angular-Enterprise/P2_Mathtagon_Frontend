@@ -30,3 +30,21 @@
   margin-left: auto;
   margin-right: auto;
   }
+  #endmsg{
+    text-align:center;
+    color:white;
+    font-size:200px;   
+    top:40%;
+    margin-left: auto;
+    margin-right: auto; 
+    width:100%;      
+
+}
+#endmsg{
+    animation: blinker 2s linear infinite;
+}
+@keyframes blinker{
+    50%{
+        opacity:0;
+    }
+}
