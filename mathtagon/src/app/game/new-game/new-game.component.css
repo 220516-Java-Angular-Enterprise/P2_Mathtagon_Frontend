@@ -1,33 +1,100 @@
-/* .container {
+.container {
   position: absolute;
-  top: 20%;
-  left: 35%;
-  width: 500px;
-  height: 300px;
-} */
-
-.outer-container {
-  margin-top: 20px;
-  width: 500px;
-  height: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* background: hsla(205, 46%, 30%, 1); */
-  background: linear-gradient(
-    90deg,
-    rgb(214, 142, 47) 0%,
-    rgb(189, 67, 30) 100%
-  );
+  justify-content: center;
+  align-items: center;
 }
 
 .heading {
   color: black;
   background: -webkit-linear-gradient(rgb(65, 155, 214), #333);
   font-size: 40px;
+  position: absolute;
+
+  width: 500px;
+  margin-top: 150px;
+  top: 50%;
+  left: 50%;
+}
+
+.card {
+  width: 500px;
+  height: 300px;
+  background: linear-gradient(
+    90deg,
+    rgb(214, 142, 47) 0%,
+    rgb(189, 67, 30) 100%
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 270px;
+}
+
+#start {
+  position: absolute;
+  top: 50%;
+  left: 67%;
+  margin-top: 205px;
+}
+
+.heading {
+  /* display: flex; */
+  color: black;
+  background: -webkit-linear-gradient(rgb(65, 155, 214), #333);
+  font-size: 40px;
   text-align: center;
   margin-bottom: 20px;
+}
+
+#post {
+  color: White;
+  width: 50%;
+  background: black;
+  border: 3px grey solid;
+  font-size: 40px;
+  text-align: center;
+
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#equation {
+  background: black;
+  border: 3px grey solid;
+  text-align: center;
+  color: White;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: 200px;
+  height: 70px;
+
+  font-size: 35px;
+}
+
+.input {
+  width: 70px;
+  font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.answer {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input {
+  width: 70px;
+  font-size: 25px;
+}
+
+.btn {
+  position: relative;
+  left: 10px;
 }
 
 table {
@@ -43,37 +110,10 @@ thead {
   font-size: 28px;
   top: 30%;
 }
-#post {
-  color: White;
-  width: 50%;
-  background: black;
-  border: 3px grey solid;
-  font-size: 40px;
-  text-align: center;
-  /* top: 60%; */
-  /* display: block; */
-  margin-top: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .form {
   margin-top: 10px;
 
   position: relative;
   left: 100px;
-}
-
-.input {
-  width: 70px;
-  font-size: 25px;
-}
-
-.btn {
-  position: relative;
-  left: 10px;
-}
-
-.answer {
-  margin-top: 10px;
 }

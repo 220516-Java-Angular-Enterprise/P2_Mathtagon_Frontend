@@ -1,17 +1,28 @@
-<button type="button" class="btn btn-danger" (click)="start()" *ngIf="!started">
-  Start Game
-</button>
-
-<div id="problems"></div>
-<div id="style">
+<div class="style">
   <div class="container">
-    <h2 class="prob">Problem</h2>
+    <div>
+      <h2 class="heading">Start the Battle</h2>
+    </div>
+    <button
+      id="start"
+      class="btn btn-danger"
+      (click)="start()"
+      *ngIf="!started"
+    >
+      Start
+    </button>
+    <div class="card">
+      <div id="problems"></div>
+      <div id="style"></div>
+      <h2 id="post">Score: {{ score }} Lives:{{ lives }}</h2>
+      <br />
+      <div id="equation">{{ toSolve }}</div>
+      <div class="answer">
+        <input class="input" type="text" />
+        <button type="submit" class="btn btn-primary" (click)="checkAnswer()">
+          Submit
+        </button>
+      </div>
+    </div>
   </div>
 </div>
-<h2 id="post">Score: {{ score }} Lives:{{ lives }}</h2>
-<br />
-<div id="post">{{ toSolve }}</div>
-<input id="answer" type="text" />
-<button type="submit" class="btn btn-primary" (click)="checkAnswer()">
-  Submit
-</button>
