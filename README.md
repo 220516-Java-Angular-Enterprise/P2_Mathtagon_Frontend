@@ -23,7 +23,7 @@ the timer and longer streaks of correct answers will give a bigger bonus. The ga
 | Spring Boot    | AWS RDS & EC2 |
 | HTML           | Docker        |
 | Typescript     | Jenkins       |
- |                | J-Unit        |
+ |   S3             | J-Unit        |
  |                | Mockito       |
  |                | Postman       |
  |                | Nodes         |
