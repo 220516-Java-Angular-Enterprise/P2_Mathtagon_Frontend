@@ -5,6 +5,7 @@ import { ProblemsService } from 'src/app/services/problems.service';
 import { HttpClient } from '@angular/common/http';
 import { GameService } from 'src/app/services/game.service';
 import { User } from 'src/app/models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'new-game',
@@ -21,7 +22,7 @@ export class NewGameComponent implements OnInit {
   answers!: string;
 
 
-  constructor(private _problemsService: ProblemsService, private _gameService: GameService,private _http: HttpClient) {
+  constructor(private _problemsService: ProblemsService, private _gameService: GameService,private _router: Router) {
     this._problemsService.problem$.subscribe(p => this.toSolve = p);
     this._problemsService.answer$.subscribe(a => this.answers = a);
     
@@ -69,7 +70,7 @@ export class NewGameComponent implements OnInit {
       this.cycle();
     }
     else {
-      this.end();
+      this.ended = true;
     }
   }
 

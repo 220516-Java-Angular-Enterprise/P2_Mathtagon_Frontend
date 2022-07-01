@@ -15,3 +15,4 @@
 <div id="post">{{toSolve}}</div>
 <input id="answer" type="text" />
 <button type="submit" *ngIf="started && !ended" class="btn btn-primary" (click)="checkAnswer()">Submit</button>
+<button *ngIf="ended" class="btn btn-primary" routerLink="/top-five">Leaderboard</button>
