@@ -19,8 +19,22 @@
       <div id="equation">{{ toSolve }}</div>
       <div class="answer">
         <input class="input" type="text" />
-        <button type="submit" class="btn btn-primary" (click)="checkAnswer()">
+
+        <!-- <button type="submit" class="btn btn-primary" (click)="checkAnswer()">
           Submit
+        </button> -->
+
+        <button
+          type="submit"
+          *ngIf="started && !ended"
+          class="btn btn-primary"
+          (click)="checkAnswer()"
+        >
+          Submit
+        </button>
+
+        <button *ngIf="ended" class="btn btn-primary" routerLink="/top-five">
+          Leaderboard
         </button>
       </div>
     </div>
