@@ -1,4 +1,8 @@
-<button type="button" class="btn btn-danger" >Start Game</button>
+<button
+  type="button"
+  class="btn btn-danger"
+  (click)="start()"
+  *ngIf="!started">Start Game</button>
 
 <div id="problems"></div>
 <div id="style">
@@ -6,5 +10,9 @@
     <h2 class="prob">Problem</h2>
   </div>
 </div>
-<div id="post">{{problem1}}</div>
+<h2 id="post">Score: {{score}}  Lives:{{lives}}</h2>
+<br />
+<div id="post">{{toSolve}}</div>
+<input id="answer" type="text" />
+<button type="submit" class="btn btn-primary" (click)="checkAnswer()">Submit</button>
 
