@@ -40,7 +40,7 @@ export class AuthFormComponent implements OnInit {
 
       this._userService.login(this.tmpUser).then(() => {
           alert(`Login Successful. Heading to arena.`);
-          this._router.navigateByUrl('/');
+          this._router.navigateByUrl('/new-game');
         }).catch(err => {
           console.log(err);
         });
